@@ -1,0 +1,23 @@
+ID,Date,Product,Region,Revenue,Units_Sold
+1,2023-01-01,Widget A,North,1050.50,10
+2,2023-01-08,Widget B,South,2400.00,20
+3,2023-01-15,Widget A,East,800.75,8
+4,2023-01-22,Widget C,West,3200.25,15
+5,2023-01-29,Widget B,North,1500.00,12
+6,2023-02-05,Widget C,South,4100.50,22
+7,2023-02-12,Widget A,West,950.00,9
+8,2023-02-19,Widget B,East,2100.00,18
+9,2023-02-26,Widget C,North,2800.75,14
+10,2023-03-05,Widget A,South,1150.25,11
+11,2023-03-12,Widget B,North,1800.50,15
+12,2023-03-19,Widget C,South,3600.00,20
+13,2023-03-26,Widget A,East,1200.75,11
+14,2023-04-02,Widget B,West,2600.25,16
+15,2023-04-09,Widget C,North,1400.00,10
+16,2023-04-16,Widget A,South,3300.50,19
+17,2023-04-23,Widget B,East,1000.00,9
+18,2023-04-30,Widget C,West,2150.00,15
+19,2023-05-07,Widget A,North,1700.75,12
+20,2023-05-14,Widget B,South,3100.25,18
+21,2023-05-21,Widget C,East,1900.00,14
+22,2023-05-28,Widget A,West,2900.50,17

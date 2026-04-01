@@ -1,0 +1,34 @@
+# statbot_backend/docker-compose.yml
+# ============================================================
+# Production-ready compose file for StatBot Pro (Week 4).
+# Volumes:
+#   - data/           read-only  (protects source data)
+#   - charts/         read-write (agent writes .png files)
+#   - uploads/        read-write (API saves user CSV uploads)
+# ============================================================
+version: '3.8'
+
+services:
+  statbot_agent:
+    build: .
+    container_name: statbot_sandboxed_agent
+    ports:
+      - "8000:8000"
+    environment:
+      # Inject the API Key at runtime — never bake secrets into the image
+      - GROQ_API_KEY=${GROQ_API_KEY}
+    volumes:
+      # Source data — read-only to protect originals
+      - ./data:/app/data:ro
+      # Chart output — read-write so the agent can persist .png files
+      - ./src/static/charts:/app/src/static/charts:rw
+      # Upload target — read-write so the API can save incoming CSV files
+      - ./src/static/uploads:/app/src/static/uploads:rw
+    command: ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000"]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s

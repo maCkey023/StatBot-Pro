@@ -1,0 +1,12 @@
+# statbot_backend/requirements.txt
+langchain
+langchain-experimental
+langchain-groq
+pandas
+matplotlib
+python-dotenv
+tabulate
+fastapi
+uvicorn
+websockets
+python-multipart
