@@ -84,7 +84,7 @@ GROQ_API_KEY=your_actual_api_key_here
 Build and spin up the hardened Pandas agent execution environment:
 
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 > **Note:** The backend API will be available at `http://localhost:8000`.
 
